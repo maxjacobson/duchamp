@@ -5,5 +5,6 @@ RSpec.describe "foo" do
     # this is a lint offense (unused variable):
     fafa = 47
     expect(true).to eq true
+    raise 'hell'
   end
 end
