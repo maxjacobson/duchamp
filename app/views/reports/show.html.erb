@@ -33,7 +33,12 @@
     </tbody>
   </table>
 <% else %>
-  <p>Failed to execute query</p>
+  <p class="danger">
+    Failed to execute query with error:
+    <code>
+      <%= @renderer.query_error %>
+    </code>
+  </p>
 <% end %>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |

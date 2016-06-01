@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-Report.create(
-  name: "My meta report",
-  query: "select name, query from reports"
-)
+words = %w(dog cow pig cat squirrel)
+
+100.times do
+  Report.create(
+    name: "My #{words.sample} report",
+    query: "select name, query from reports where name like '%#{words.sample}%'"
+  )
+end

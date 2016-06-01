@@ -18,12 +18,19 @@ class ReportRenderer
     query_result.rows
   end
 
+  def query_error
+    raise 'hell' if query_successful?
+
+    @query_error
+  end
+
   private
 
   def query_result
     @query_result ||= begin
                         ActiveRecord::Base.connection.exec_query(report.query)
                       rescue ActiveRecord::ActiveRecordError => e
+                        @query_error = e.message
                         false
                       end
   end
