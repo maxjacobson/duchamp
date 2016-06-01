@@ -10,6 +10,7 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.json
   def show
+    @renderer = ReportRenderer.new(@report)
   end
 
   # GET /reports/new
