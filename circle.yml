@@ -1,3 +1,8 @@
 test:
   override:
     - "bundle exec rspec"
+deployment:
+  production:
+    branch: 'edge'
+    heroku:
+      appname: 'duchamp'
