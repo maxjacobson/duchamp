@@ -12,3 +12,6 @@ Deploy:
 Should happen automatically if tests are green.
 
 * `git push heroku edge:master`
+
+![](https://en.wikipedia.org/wiki/File:Duchamp_Fountaine.jpg)
+
