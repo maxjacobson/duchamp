@@ -8,4 +8,8 @@ class Dog
   def untested_method
     puts "this should lower the coverage, huh"
   end
+
+  def another_untested_method
+    puts "this should lower the coverage, huh"
+  end
 end
